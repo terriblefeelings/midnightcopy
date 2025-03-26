@@ -1,17 +1,22 @@
 /* main.css */
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500;700&display=swap');
 
 :root {
-    container-name: root;
-    --custom-guild-list-padding: 12px;
-    --panel-backdrop-filter: none;
+  container-name: root;
+  --custom-guilds-bar-width: 72px;
+  --gap: 12px;
+  --custom-guild-list-padding: 12px;
+  --panel-backdrop-filter: none;
+
+  --font-primary: 'Roboto', 'Noto Sans', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --font-code: 'Source Code Pro', 'Fira Code', monospace;
 }
 
 body {
     container-name: body;
 
     /* font, change to '' for default discord font */
-    --font: 'figtree';
+    --font: 'Roboto';
 
     /* sizes */
     --gap: 12px; /* spacing between panels */
@@ -404,8 +409,11 @@ body {
 }
 
 body {
-    --font-primary: var(--font), 'gg sans';
-    --font-display: var(--font), 'gg sans';
+    --font-primary: var(--font-primary);
+    --font-display: var(--font-primary);
+    --font-code: var(--font-code);
+}
+
 }
 
 [class*='scroll'] {
@@ -1050,7 +1058,7 @@ body {
         path[fill='#43a25a'] /* status activity icon */ {
             fill: var(--online);
         }
-        .status_a423bd[style='background-color: rgb(67, 162, 90);'] {
+        .status_a423bd[style='background-color: rgb(68, 162, 91);'] {
             background-color: var(--online) !important;
         }
         rect[fill='#ca9654'] {
@@ -1291,7 +1299,7 @@ body {
         .menu_c1e9c4 /* context menus */,
         .contentWrapper__08434 /* emoji/gif panel */,
         .root__49fc1 /* modals like invite */,
-        .outer_c0bea0.biteSize_c0bea0:not(.custom-theme-background) /* small profile popup */,
+        .outer_c0bea0 /* small profile popup */,
         .autocomplete__6b0e0 /* autocomplete */,
         .container__55c99 /* search suggestions */,
         .messagesPopoutWrap__45690 /* inbox */,
@@ -1400,4 +1408,45 @@ body {
         background-color: var(--online) !important;
     }
 }
+
+.vc-ranb-button {
+    font-size: 11px !important;
+    padding: 2px 6px !important;
+    margin-bottom: 4px !important;
+    width: fit-content !important;
+    height: auto !important;
+    border-radius: 6px !important;
+    line-height: 1.2 !important;
+}
+
+.vc-ranb-button {
+    display: block !important;
+    margin: 4px auto !important;
+    text-align: center !important;
+}
+
+.vc-ranb-button:parent {
+    display: flex;
+    justify-content: center;
+}
+
+
+    .wrapper__6e9f8, .icon__6e9f8, .childWrapper__6e9f8 { 
+        border-radius: 100%; 
+    }
+
+    .folder__48112 { 
+        border-radius: 100%; 
+    }
+
+    .folderIconWrapper__48112 { 
+        border-radius: 25%; 
+    }
+    
+    
+    .icon_f34534.guildIcon__48112 { 
+        border-radius: 50% !important 
+    }
+
+
 
